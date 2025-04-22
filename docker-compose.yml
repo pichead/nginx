@@ -1,21 +1,25 @@
-version: "3.8"
+
 
 services:
   nginx:
-    build:
-      context: ./
+    image: nginx
     container_name: nginx-con
-    ports:
-      - '80:80'
-    restart: always
     privileged: true
     volumes:
       - ./sites-enabled:/etc/nginx/conf.d
       - ./ssl:/etc/ssl
+      #- ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - '8080:8080'
+      - '80:80'
+      - '443:443'
+    restart: always
     networks:
       - nginx-net
 
+
+
 networks:
   nginx-net:
-    name: nginx-net
+    name: e-wallet-net
     external: true

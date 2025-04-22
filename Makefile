@@ -24,7 +24,7 @@ update:
 
 # deploy app
 deploy:
-	docker network create nginx-net
+	docker network create e-wallet-net
 	docker compose -p nginx up -d --build
 
 # down app
