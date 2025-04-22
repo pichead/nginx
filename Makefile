@@ -26,3 +26,7 @@ update:
 deploy:
 	docker network create nginx-net
 	docker compose -p nginx up -d --build
+
+# down app
+down:
+	docker compose -p nginx down
