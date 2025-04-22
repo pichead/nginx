@@ -1,0 +1,16 @@
+*.env
+
+# Ignore all .pem files inside ssl/
+ssl/*.pem
+
+# Allow everything else inside ssl/
+!ssl/
+!ssl/*
+
+
+# Ignore all .pem files inside sites-enabled/
+sites-enabled/*.conf
+
+# Allow everything else inside sites-enabled/
+!sites-enabled/
+!sites-enabled/*
