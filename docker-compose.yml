@@ -8,9 +8,14 @@ services:
     ports:
       - '80:80'
     restart: always
+    privileged: true
+    volumes:
+      - ./sites-enabled:/etc/nginx/conf.d
+      - ./ssl:/etc/ssl
     networks:
       - nginx-net
 
 networks:
   nginx-net:
-    driver: bridge
+    name: nginx-net
+    external: true
