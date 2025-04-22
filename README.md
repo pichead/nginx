@@ -1,4 +1,4 @@
-```markdown
+
 # Nginx Server Setup with Docker
 
 This repository provides a ready-to-use Nginx configuration for serving static content and reverse-proxying applications, packaged in a Docker container with SSL support.
